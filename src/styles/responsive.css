@@ -1,0 +1,49 @@
+/* Base responsive styles */
+@layer utilities {
+  .container-padding {
+    @apply px-4 sm:px-6 lg:px-8;
+  }
+
+  .responsive-grid {
+    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6;
+  }
+
+  .responsive-section {
+    @apply py-8 sm:py-12 lg:py-16;
+  }
+
+  .responsive-text {
+    @apply text-base sm:text-lg lg:text-xl;
+  }
+
+  .responsive-heading {
+    @apply text-2xl sm:text-3xl lg:text-4xl font-playfair;
+  }
+}
+
+/* Mobile menu animation */
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.mobile-menu-enter {
+  animation: slideIn 0.3s ease-out;
+}
+
+/* Touch-friendly interactions */
+@media (hover: none) {
+  .touch-target {
+    @apply min-h-[44px] min-w-[44px];
+  }
+}
+
+/* Responsive images */
+.responsive-image {
+  @apply w-full h-full object-cover;
+  aspect-ratio: 3/4;
+}

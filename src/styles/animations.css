@@ -1,0 +1,56 @@
+@keyframes snowfall-1 {
+  0% {
+    transform: translateY(-10%) translateX(-50px);
+  }
+  100% {
+    transform: translateY(100vh) translateX(50px);
+  }
+}
+
+@keyframes snowfall-2 {
+  0% {
+    transform: translateY(-10%) translateX(50px);
+  }
+  100% {
+    transform: translateY(100vh) translateX(-50px);
+  }
+}
+
+.animate-snow-1 {
+  animation: snowfall-1 10s linear infinite;
+}
+
+.animate-snow-2 {
+  animation: snowfall-2 15s linear infinite;
+}
+
+.snow-particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: white;
+  border-radius: 50%;
+  filter: blur(1px);
+}
+
+.festive-gradient {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 215, 0, 0.1),
+    rgba(211, 47, 47, 0.1),
+    rgba(0, 128, 0, 0.1)
+  );
+  animation: gradient-shift 10s ease infinite;
+}
+
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
